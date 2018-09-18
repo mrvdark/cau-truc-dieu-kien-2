@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let result = 0;
+    let resultstr = "";
+
+    // Bài 1: Chuyển từ độ C sang độ F
+    function convertTemp(n) {
+        result = n * 9 / 5 + 32;
+        return result;
+    }
+
+    // Bài 2: Chuyển từ met sang feet
+    function convertLength(m) {
+        result = m * 3.2808;
+        return result;
+    }
+
+    // Bài 3: Tính diện tích hình vuông
+    function sSquare(a) {
+        result = a * a;
+        return result;
+    }
+
+    // Bài 4: Tính diện tích hình chữ nhật
+    function sRectangle(a, b) {
+        result = a * b;
+        return result;
+    }
+
+    // Bài 5: Tính diện tích tam giác vuông
+    function sTriangle(a, b) {
+        result = a * b / 2;
+        return result;
+    }
+
+    // Bài 6: Giải phương trình bậc 1
+    function phuongTrinh1(a, b) {
+        if (a == 0 && b == 0) {
+            console.log("Phương trình vô số nghiệm");
+        }
+        else if (a != 0 && b == 0) {
+            console.log("Phương trình có nghiệm x = 0");
+        }
+        else if (a == 0 && b != 0) {
+            console.log("Phương trình vô nghiệm");
+        }
+        else {
+            console.log("Phương trình có nghiệm x = " + (-b / a));
+        }
+    }
+
+    // Bài 7: Giải phương trình bậc 2
+    function phuongTrinh2(x, y, z) {
+        let x1, x2;
+        let delta;
+        delta = (y * y - 4 * x * z);
+        if (delta === 0) {
+            console.log("phuong trinh co nghiem kep");
+            x1 = -y / (2 * x);
+            x2 = -y / (2 * x);
+            form.x.value = eval(x1);
+            form.y.value = eval(x2);
+        }
+        else if (delta < 0) {
+            console.log("phuong trinh vo nghiem");
+        }
+        else {
+            console.log("phuong trinh co hai nghiem");
+            x1 = (-y - Math.sqrt(delta)) / (2 * x);
+            x2 = (-y + Math.sqrt(delta)) / (2 * x);
+            console.log(x1);
+            console.log(x2);
+        }
+    }
+
+    // Bài 8: Kiểm tra số nhập vào có phải là tuổi của 1 người hay không
+    function checkAge(age) {
+        if (age < 0 || age > 120) resultstr = "Not a human !!!";
+        else resultstr = "This is a human !!!";
+        return resultstr;
+    }
+
+    // Bài 9: Kiểm tra a, b, c có phải là cạnh của 1 tam giác
+    function checkTriangle(a, b, c) {
+        if (a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b) resultstr = "It's a Triangle";
+        else resultstr = "It is'nt a Triangle";
+        return resultstr;
+    }
+
+    // Bài 10: Tính giá điện
+    function electricMoney(n) {
+        if (n < 100) result = n * 1300;
+        else if (n < 250) result = (n - 100) * 1500 + 130000;
+        else result = (n - 250) * 2300 + 355000;
+        return result;
+    }
+
+    // Bài 11: Tính thuế thu nhập cá nhân
+    function persionalSalary(salary) {
+        if (salary > 10000000) result = salary / 100 * 10;
+        else result = 0;
+        return result;
+    }
+
+    // Bài 12: Tính lãi suất ngân hàng
+    function rateBank(money, month, rate) {
+        result = money / 100 * rate * month;
+        return result;
+    }
+</script>
+</body>
+</html>
